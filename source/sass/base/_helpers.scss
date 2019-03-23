@@ -1,0 +1,137 @@
+.trans-2{
+	transition: all 0.2s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.trans-all-2{
+	*{
+		transition: all 0.2s cubic-bezier(0.7, 0, 0.3, 1);
+		&:before,
+		&:after{
+			transition: all 0.2s cubic-bezier(0.7, 0, 0.3, 1);
+		}
+	}
+}
+.trans-3{
+	transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.trans-all-3{
+	*{
+		transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+		&:before,
+		&:after{
+			transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+		}
+	}
+}
+.trans-4{
+	transition: all 0.4s ease;
+}
+.trans-all-4{
+	*{
+		transition: all 0.4s ease;
+		&:before,
+		&:after{
+			transition: all 0.4s ease;
+		}
+	}
+}
+.trans-5{
+	transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+}
+.trans-all-5{
+	*{
+		transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+		&:before,
+		&:after{
+			transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+		}
+	}
+}
+.trans-no{
+	transition: none;
+}
+.trans-no-all{
+	*{
+		transition: none;
+		&:before,
+		&:after{
+			transition: none;
+		}
+	}
+}
+
+ul,
+ol,
+li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.no-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	ul,
+	ol,
+	li{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+
+ol.no-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	ol,
+	ul,
+	li{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+.flex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.object-fit-cover{
+	img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		object-fit: cover;
+	}
+}
+.flex, .floating_panel .adaptive_menu, .floating_panel ul li a, .floating_panel ul li span, aside div.side_widget div.sidebar_subscribe form button[type="submit"], div.bottom_partners ul, div.content article.news_static div.page_media.page_photo_gallery div.media_items figure a::before, div.content article.news_static div.page_media.page_video_gallery div.media_items figure a::before, div.content div.departments ul li::before, div.content div.deputees ul li > a::after, div.content div.gallery_images figure a::before, div.content div.news_wrap article div.news_texts div.share_more div.more a, div.content div.news_wrap article div.news_texts div.share_more div.share ul li a, div.content div.subscribe div.subscribe_form button[type="submit"], div.content div.subscribe div.subscribe_topics div.topic_item label, div.file_uploader label strong, div.info div.info_icon, div.inside_blocks ul li a, div.pagination ul.desktop_pagination li a, div.pagination ul.device_pagination li a, div.photos_wrap div.photos_list figure a::before, div.poll div.poll_results div.poll_result div.poll_result_track div span, div.resp_search div.search_wrap, div.see_all a, div.ui-datepicker a.ui-datepicker-next, div.ui-datepicker a.ui-datepicker-prev, div.ui-datepicker div.ui-datepicker-header, div.ui-datepicker div.ui-datepicker-title, div.ui-datepicker table.ui-datepicker-calendar td a, footer div.footer_column address ul li em, header div.header div.header_right div.lang ul li a, nav.navigation > ul > li > a, section.icons_menu ul li a, section.icons_menu ul li a span, section.slider_blocks div.blocks_wrap div.blocks_listing div.block_item a span, section.slider_blocks div.blocks_wrap div.wide_block a span {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.no-select,
+.no-select-all{
+	*{
+		user-select: none;
+	}
+}
+
+section.inside_title_wrap {
+    background-color: #026aac !important;
+}

@@ -1,0 +1,503 @@
+// ტეგები
+body{
+	color: $cbase;
+	font-size: 14px;
+	font-family: $ffbase, sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: rgba(#000, 0);
+	background: url("../../themes/images/bak.jpg") center 220px repeat-x;
+}
+a{
+	color: $ccorp;
+	text-decoration: none;
+	// outline: none;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+	&:hover,
+	&:focus{
+		text-decoration: none;
+	}
+	&:hover{
+		color: $cbase;
+	}
+	&:focus{
+		color: $ccorp;
+	}
+}
+
+div.content div.contact_wrap div.contact_addresses div.branches ul li em, div.content div.contact_wrap div.contact_addresses div.branches ul li span, div.content div.contact_wrap div.contact_addresses div.branches ul li strong {
+    display: block;
+}
+div.content div.contact_wrap div.contact_form form div.form_item input, div.content div.contact_wrap div.contact_form form div.form_item textarea {
+    height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 2px solid #3b87d3;
+}
+// ტეგები
+// ფორმები
+label{
+	font-family: $ffbase;
+}
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea{
+	color: $cbase;
+	font-family: $ffbase;
+	background-color: $clight;
+}
+button.gilaki{
+	color: $cwhite;
+	font-family: $ffbase;
+	background-color: $ccorp;
+
+	&:hover{
+		background-color: $cbase;
+	}
+}
+::placeholder{
+	color: $cread;
+	font-family: $ffbase;
+}
+div.artform_wrap{
+	background-color: $clight;
+	&.artradio{
+		transition: all 0.4s ease;
+		&:before{
+			background-color: $cwhite;
+		}
+		&.checked{
+			background-color: $ccorp;
+		}
+		&.disabled{
+			background-color: $cwhite;
+			border: 1px solid $clight;
+			&.checked{
+				&:before{
+					background-color: $clight;
+				}
+			}
+		}
+	}
+	&.artchecker{
+		transition: all 0.4s ease;
+		&:before,
+		&:after{
+			background-color: $cwhite;
+		}
+		&.checked{
+			background-color: $ccorp;
+		}
+		&.disabled{
+			background-color: $cwhite;
+			border: 1px solid $clight;
+			&.checked{
+				&:before,
+				&:after{
+					background-color: $clight;
+				}
+			}
+		}
+	}
+}
+span.select2{
+	span.selection{
+		span.select2-selection{
+			background-color: $clight;
+			span.select2-selection__rendered{
+				color: $cbase;
+				span.select2-selection__placeholder{
+					color: $cbase;
+				}
+				span.select2-selection__clear{
+					color: $cbase;
+				}
+			}
+			span.select2-selection__arrow{
+				&:before,
+				&:after{
+					background-color: $cbase;
+				}
+			}
+		}
+	}
+}
+span.select2-container{
+	width: 100% !important;
+	span.select2-dropdown{
+		font-size: 12px;
+		background-color: $clight;
+		span.select2-results{
+			ul{
+				li{
+					&.select2-results__option--highlighted{
+						background-color: $cbase;
+					}
+				}
+			}
+		}
+	}
+}
+div.file_uploader{
+	margin-bottom: 30px;
+	@media(max-width: 576px){
+		margin-bottom: 20px;
+	}
+	label{
+		height: 70px;
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 16px;
+		background-color: transparent;
+		border: 2px solid $clightblue;
+		@media(max-width: 1200px){
+			height: 60px;
+		}
+		span{
+			color: $cread;
+		}
+		strong{
+			@extend .flex;
+			width: 150px;
+			padding: 0 10px;
+			color: $cwhite;
+			font-size: 14px;
+			text-align: center;
+			background-color: $clightblue;
+			border-radius: 0;
+		}
+	}
+}
+// ფორმები
+// მთავარი მენიუ
+nav.navigation{
+	> ul{
+		> li{
+			> a{
+				color: $ccorp;
+			}
+			&.active,
+			&:hover{
+				> a{
+					color: $cbase;
+				}
+			}
+			ul{
+				li{
+					a{
+						color: $cread;
+					}
+					&.active,
+					&:hover{
+						> a{
+							color: $ccorp;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// მთავარი მენიუ
+// კონტენტის ანიმაცია
+div.content{
+	@extend .trans-all-4;
+}
+// კონტენტის ანიმაცია
+// რუკა
+div.map{
+	width: 100%;
+	height: 300px;
+}
+// რუკა
+// SVG Stroke ანიმაციისთვის
+svg.dashed{
+	fill: none;
+	path{
+		transition: all 0.4s ease;
+	}
+	&:hover{
+		path{
+			stroke-dashoffset: 0 !important;
+		}
+	}
+}
+div.big_error{
+	margin-bottom: 10px;
+	padding: 10px 15px;
+	color: $cwhite;
+	font-size: 10px;
+	background-color: $cdanger;
+	border-radius: 5px;
+}
+div.ui-datepicker{
+	@extend .trans-all-4;
+	text-align: center;
+	table{
+		width: 100%;
+	}
+	a.ui-datepicker-next,
+	a.ui-datepicker-prev{
+		@extend .flex;
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		left: 0;
+		top: 0;
+		padding: 10px;
+		font-size: 0;
+		background-color: $cwhite;
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 2;
+		&:before{
+			display: block;
+			position: absolute;
+			content: "";
+			width: 5px;
+			height: 5px;
+			transform: rotate(45deg);
+			border-left: 1px solid $ccorp;
+			border-bottom: 1px solid $ccorp;
+			transition: all 0.4s ease;
+		}
+		span{
+			display: none;
+		}
+		&:hover{
+			background-color: $ccorp;
+			&:before{
+				border-color: $cwhite;
+			}
+		}
+	}
+	a.ui-datepicker-next{
+		left: auto;
+		right: 0;
+		&:before{
+			transform: rotate(-130deg);
+		}
+	}
+	div.ui-datepicker-header,
+	div.ui-datepicker-title{
+		@extend .flex;
+		height: 25px;
+		margin-bottom: 10px;
+		select{
+			height: 20px;
+			font-family: $ffmain;
+			&.ui-datepicker-month{
+				width: 105px;
+				margin-right: 10px;
+			}
+			&.ui-datepicker-year{
+				width: 60px;
+			}
+		}
+	}
+	table.ui-datepicker-calendar{
+		width: 100%;
+		color: $cgray;
+		text-align: center;
+		span{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			text-align: center;
+		}
+		th{
+			padding: 0 0 10px;
+			color: $cmain;
+			font-weight: 700;
+			text-align: center;
+		}
+		td{
+			vertical-align: center;
+			height: 25px;
+			a{
+				@extend .flex;
+				width: 35px;
+				height: 35px;
+				margin: 5px auto;
+				color: $cread;
+				border-radius: 50%;
+				cursor: default;
+				@media(max-width: 1400px){
+					margin: 2px auto;
+				}
+			}
+			&.event{
+				a{
+					color: $cwhite;
+					background-color: $ccorp;
+					cursor: pointer;
+					&:hover{
+						background-color: $cbase;
+					}
+				}
+			}
+			&.ui-datepicker-today{
+				a{
+					color: $cwhite;
+					background-color: $cmain;
+					cursor: pointer;
+					&:hover{
+						color: $cmain;
+						background-color: $cline;
+					}
+				}
+			}
+		}
+	}
+	&#ui-datepicker-div{
+		padding: 15px;
+		background-color: $cwhite;
+		border-radius: 10px;
+		box-shadow: 0 10px 20px rgba($cblack, 0.1);
+	}
+}
+main{
+	display: flex;
+	@media(max-width: 1200px){
+		flex-direction: column;
+	}
+	div.content{
+		width: 65%;
+		padding: 50px 30px 50px 15%;
+		@media(max-width: 1600px){
+			padding-left: 10%;
+		}
+		@media(max-width: 1400px){
+			padding: 40px 20px 40px 7%;
+		}
+		@media(max-width: 1200px){
+			width: auto;
+			padding: 30px 20px;
+		}
+		@media(max-width: 992px){
+			padding: 30px 15px;
+		}
+		&.wide{
+			width: 100%;
+			padding-right: 15%;
+			@media(max-width: 1600px){
+				padding-right: 10%;
+			}
+			@media(max-width: 1200px){
+				padding-right: 20px;
+			}
+			@media(max-width: 992px){
+				padding-right: 15px;
+			}
+		}
+	}
+	aside{
+		width: 35%;
+		padding: 50px 15% 50px 30px;
+		background-color: $clighterblue;
+		@media(max-width: 1600px){
+			padding-right: 10%;
+		}
+		@media(max-width: 1400px){
+			padding: 40px 7% 40px 20px;
+		}
+		@media(max-width: 1200px){
+			width: auto;
+			padding: 30px 20px;
+		}
+		@media(max-width: 992px){
+			padding: 30px 15px;
+		}
+		div.side_widget{
+			margin-bottom: 30px;
+			padding: 20px;
+			background-color: $cwhite;
+			box-shadow: 0 10px 20px rgba($cblack, 0.1);
+			&:last-child{
+				margin-bottom: 0;
+			}
+			h3.sidebar_title{
+				margin-bottom: 20px;
+				color: $ccorp;
+				font-size: 18px;
+				font-family: $ffmain;
+				font-weight: 700;
+				text-align: center;
+				@media(max-width: 1400px){
+					margin-bottom: 10px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+section.section_bar{
+	padding: 50px 15%;
+	background-color: $cwhite;
+	@media(max-width: 1600px){
+		padding: 45px 10%;
+	}
+	@media(max-width: 1400px){
+		padding: 35px 7%;
+	}
+	@media(max-width: 1200px){
+		padding: 30px 20px;
+	}
+	@media(max-width: 992px){
+		padding: 20px 15px;
+	}
+	&.lesspadding{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	&.nopadding{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	&.darker{
+		background-color: rgba($ccorp, 0.05);
+	}
+	&.shadowed{
+		box-shadow: 0 0 50px rgba($cblack, 0.05);
+	}
+	h2.section_title{
+		margin-bottom: 30px;
+		font-size: 24px;
+		font-family: $ffmain;
+		font-weight: 700;
+		text-align: center;
+		@media(max-width: 992px){
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
+		@media(max-width: 768px){
+			margin-bottom: 15px;
+			font-size: 18px;
+		}
+	}
+}
+div#ui-datepicker-div{
+	display: none;
+}
